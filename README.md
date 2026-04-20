@@ -4,3 +4,8 @@ Pada milestone 1, saya baru pertama kali membuat server sederhana di Rust, jadi 
 Milestone 2 Reflection Notes
 ![Commit 2 screen capture](/assets/images/commit2.png)
 Di milestone 2, saya belajar cara mengirim response HTTP yang benar ke browser, bukan cuma baca request. Saya jadi paham kalau response harus ada status line, header seperti Content-Length, lalu isi HTML. Awalnya saya sempat bingung kenapa halaman tidak tampil, ternyata path file dan format response harus tepat. Setelah berhasil, saya lebih mengerti alur dasar server mengirim halaman ke browser.
+
+Milestone 3 Reflection Notes
+![Commit 3 screen capture](/assets/images/commit3.png)
+Di milestone 3, saya belajar membuat response server jadi lebih logis, yaitu membedakan halaman yang valid dan yang tidak valid. Sekarang server saya tidak selalu mengirim hello.html, tapi mengecek request dulu lalu memilih response 200 atau 404. Dari sini saya mulai paham bahwa request line seperti GET / HTTP/1.1 bisa dipakai untuk routing sederhana. Saya juga belajar refactoring kecil dengan memisahkan status_line dan filename supaya kodenya tidak berulang dan lebih mudah dibaca. Waktu mencoba route /bad, saya lihat server benar-benar mengembalikan 404, jadi saya lebih mengerti alur dasar validasi request. 
+
